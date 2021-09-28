@@ -1,0 +1,14 @@
+# Specify that we use setuptools and setuptools_scm (to generate the version
+# string).
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "yavanna/_version.py"
+local_scheme = "no-local-version"
+
+# Make sure isort and Black are compatible
+[tool.isort]
+profile = "black"
+multi_line_output = 3
